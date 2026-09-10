@@ -32,6 +32,7 @@ if ! command -v nix >/dev/null 2>&1; then
 else
     echo "nix already installed, skipping"
 fi
+echo "    For per-project dev shells/flakes, start from https://github.com/khoryz666/nix-template"
 
 echo "==> Installing git"
 sudo apt install -y git

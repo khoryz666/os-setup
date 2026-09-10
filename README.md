@@ -99,7 +99,10 @@ Inside the Ubuntu WSL shell (`wsl -d Ubuntu`), run:
 
 [`scripts/wsl/bootstrap.sh`](scripts/wsl/bootstrap.sh) installs, in order:
 
-- Nix (official multi-user installer, `--daemon`)
+- Nix (official multi-user installer, `--daemon`) — for per-project dev
+  shells/flakes, start from
+  [khoryz666/nix-template](https://github.com/khoryz666/nix-template)
+  rather than writing a `flake.nix` from scratch
 - git
 - an `ed25519` SSH key, adds it to `ssh-agent`, and pauses so you can paste
   the public key into <https://github.com/settings/keys>
@@ -202,7 +205,10 @@ sudo apt update && sudo apt upgrade -y
 [`scripts/mint/bootstrap.sh`](scripts/mint/bootstrap.sh) does, in order:
 
 1. `apt update && apt upgrade -y`
-2. Nix (official multi-user installer, `--daemon`)
+2. Nix (official multi-user installer, `--daemon`) — for per-project dev
+   shells/flakes, start from
+   [khoryz666/nix-template](https://github.com/khoryz666/nix-template)
+   rather than writing a `flake.nix` from scratch
 3. git
 4. an `ed25519` SSH key → `ssh-agent` → pauses for you to add it to
    <https://github.com/settings/keys>

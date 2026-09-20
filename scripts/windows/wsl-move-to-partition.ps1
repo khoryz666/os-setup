@@ -31,6 +31,7 @@ wsl --unregister $DistroName
 
 Write-Host "Re-importing $DistroName into $installDir ..."
 wsl --import $DistroName $installDir $exportFile --version 2
+wsl --manage Ubuntu --set-sparse true --allow-unsafe
 
 Remove-Item $exportFile -Force
 
